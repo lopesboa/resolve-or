@@ -1,9 +1,20 @@
 {
   "name": "resolve-or",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "A simple, js lib to help devs create a union of a resolved promise or error",
   "main": "index.js",
   "repository": "git@github.com:lopesboa/resolve-or.git",
   "author": "lopesboa <lopesboa@hotmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky install",
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "husky": "^8.0.0",
+    "jest": "^29.4.3",
+    "semantic-release": "^20.1.0"
+  }
 }
