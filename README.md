@@ -1,2 +1,2 @@
 # resolve-or
-A simple, js lib to help devs create a union of a resolved promise or error
+A simple js library to help developers create a union between resolved promise or error
