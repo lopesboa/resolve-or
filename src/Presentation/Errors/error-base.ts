@@ -1,4 +1,4 @@
-import { IErrorWithCause } from "../Interfaces
+import { IErrorWithCause } from "../Interfaces"
 
 export class ErrorBase<T extends string> extends Error {
   public name: T;
