@@ -1,26 +1,25 @@
-name: npm publish
+name: Release
 on:
   push:
     branches:
       - main
-  release:
-    types: [published]
 jobs:
-  build:
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
-            fetch-depth: 0
-      - uses: actions/setup-node@v3
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
-          #registry-url: 'https://registry.npmjs.org'
-      - run: npm install
-      - run: npm publish
+          node-version: "lts/*"
+      - name: Install dependencies
+        run: npm ci
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
-           
