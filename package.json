@@ -1,6 +1,6 @@
 {
   "name": "resolve-or",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple, js lib to help devs create a union of a resolved promise or error",
   "main": "index.js",
   "repository": "git@github.com:lopesboa/resolve-or.git",

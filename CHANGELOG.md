@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/lopesboa/resolve-or/compare/v1.0.0...v1.1.0) (2023-03-24)
+
+
+### Features
+
+* create loader observable ([89154ff](https://github.com/lopesboa/resolve-or/commit/89154ffb8014cf55ce12babe5124457032d0c33e))
+
 # 1.0.0 (2023-02-27)
 
 
